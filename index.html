@@ -1,43 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Dados do Usuário - Minha Agenda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div class="pagina">
 
-        <div class="cabecalho">
-          <!-- Título e introdução -->
+  <!-- Cabeçalho da página -->
+  <header>
+    <h1>Minha Agenda</h1>
+    <p>Passo 2: Preencha seus dados para continuar</p>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+
+    <!-- Seção do formulário de dados -->
+    <section aria-labelledby="titulo-form">
+      <h2 id="titulo-form">Informações Pessoais</h2>
+
+      <form action="agenda.html" method="post">
+
+        <fieldset>
+          <legend>Dados do Usuário</legend>
+
+          <div>
+            <label for="nome">Nome completo *</label>
+            <input type="text" id="nome" name="nome" required placeholder="Ex: João da Silva">
+          </div>
+
+          <div>
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
+          </div>
+
+          <div>
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(11) 91234-5678">
+          </div>
+
+          <div>
+            <label for="data_nasc">Data de Nascimento</label>
+            <input type="date" id="data_nasc" name="data_nasc">
+          </div>
+
+        </fieldset>
+
+        <div>
+          <button type="submit">Avançar para Agenda</button>
         </div>
-      
-        <div class="conteudo-principal">
-      
-          <div class="formulario">
-            <!-- Campos do formulário, cada campo separado em: -->
-            <div class="campo">
-              <!-- Label e input -->
-            </div>
-      
-            <div class="campo">
-              <!-- Label e input -->
-            </div>
-      
-            <!-- Botão -->
-            <div class="botoes">
-              <button type="submit">Próximo</button>
-            </div>
-      
-          </div> <!-- fecha formulario -->
-      
-        </div> <!-- fecha conteudo-principal -->
-      
-        <div class="rodape">
-          <!-- Rodapé, se houver -->
-        </div>
-      
-      </div> <!-- fecha pagina -->
-      
+
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Minha Agenda. Todos os direitos reservados.</p>
+  </footer>
+
 </body>
 </html>
